@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  <link href="./css/common.css" rel="stylesheet"><link href="./css/index.css" rel="stylesheet"></head>
+  <body>
+    <div class="bg-wrapper">
+      <div class="login-center">
+        <h2 class="header-title login-center__header">авторизуйтесь</h2>
+        <div class="form-login">
+          <form class="form-login__form" action="" method="POST">
+            <div class="form-login__row">
+              <div class="form-input">
+                <input class="form-login__input" type="text" placeholder="Логин">
+                <div class="form-login__man"><img class="form-login__img" src="images/login.svg"></div>
+                <input class="form-login__input" type="password" placeholder="Пароль">
+                <div class="form-login__pass"><img class="form-login__img" src="images/password.svg"></div>
+              </div>
+            </div>
+            <div class="form-login__row">
+              <div class="form-inputs">
+                <input class="form-inputs__checkbox" id="check-3" type="checkbox" name="checkbox">
+                <label class="form-inputs__check" for="check-3">я человек</label>
+              </div>
+            </div>
+            <div class="form-login__row">
+              <div class="form-radio">
+                <div class="form-radio__title">Вы точно не робот?</div>
+                <div class="form-radio__wrap">
+                  <div class="form-radio__circle">
+                    <input class="form-radio__check" id="radio-1" type="radio" name="radio">
+                    <label class="form-radio__radio-name" for="radio-1">Да</label>
+                  </div>
+                  <div class="form-radio__circle">
+                    <input class="form-radio__check" id="radio-2" type="radio" name="radio">
+                    <label class="form-radio__radio-name" for="radio-2">Не уверен</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-login__row">
+              <div class="form-button"><a class="button button__login" href="#">На главную</a><a class="button button__login" href="#">Войти</a></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="author">
+        <p class="author__copyright">&copy; Владимир Астахов | создано с любовью в LoftSchool | 2016</p>
+      </div>
+    </div>
+  <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/index.js"></script></body>
+</html>
