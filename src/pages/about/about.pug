@@ -1,4 +1,76 @@
 extends ../base
 
+block head
+
+block title
+    title Обо мне
+
 block main
-    h1 page about-pug
+  section.section.section-about
+    svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="section-triangle")
+      polygon(class="section-triangle__left" points="0,0 0,86 500.8,86 500.8,75.5")
+      polygon(class="section-triangle__right" points="1000,0 1000,86 500,86 500,75.5")
+    .container
+      .about
+        .about-left
+          .about-left__title
+            .block-title.about-me Обо мне
+
+          .about-left__desc
+            .user-desc
+              .user-desc__img
+                img.user-desc__pic(src=require("../../img/man.png"))
+              .user-desc__title
+                .block-title.user-desc__subtitle Кто я
+
+              .user-desc__text.text-block
+                p Я веб разработчик из Новосибирска. Мне 27 лет.
+                  | Я занимаюсь разработкой современных сайтов
+                  | и приложений. Мне нравится делать интересные
+                  | и современные проекты.
+                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+                  | Чуть позже я освежу в нём свой контент. А пока посмотрите,
+                  | как тут всё классно и красиво!
+
+        .about-right
+          .about-right__header
+            .block-title.about-title Чем я могу быть вам полезен
+          .about-right__desc.text-block
+            p Больше всего меня привлекет Frontend разработка, но я также знаком
+              | и могу решать не сложные задачи на Backend. Но давайте по порядку.
+          .about-right__content
+            ul.skills
+              -
+                var titleSkill = ['Frontend', 'Backend', 'Workflow']
+              each item in titleSkill
+                li.skills__item
+                  .skills-row
+                    .skills-row__header #{item}
+                    ul.skills-row__list
+                      -
+                        var skillList = ['Html5','Css3','JavaScript & jQuery']
+                         
+                      each item in skillList
+                        li.skills-row__item
+                          .skill(name= item)
+                            img.skill__circle(src=require("../../img/ellipse-3.png"))
+
+  section.section.map
+    .google-map
+    .map__data
+      .contacts
+        .contacts__title
+          .block-title.contacts-header Контакты
+        ul.contacts__list
+          -
+            var contacts = [
+              ['skype', 'skypekdn'],
+              ['mail', 'elarkov@inbox.ru'],
+              ['phone', '+7 996 381 12 35'],
+              ['locate', 'г.Новосибирск, ул.Есенина, д.9'],
+            ]
+
+          each item in contacts
+            li.contacts__item.contacts-row
+              .contacts-row__icon #{item[0]}
+              .contacts-row__title #{item[1]}

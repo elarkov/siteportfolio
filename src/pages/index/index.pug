@@ -1,39 +1,50 @@
-extends ../base
-
-block main
-	div.bg-wrapper
-		div.login-center
-			h2.header-title.login-center__header авторизуйтесь
+doctype html
+html(lang="ru")
+	block head
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		block title
+		title Document
+	body
+		div.bg-wrapper
 			div.form-login
 				form.form-login__form(action="",method="POST")
-					div.form-login__row
-						div.form-input
-							input.form-login__input(type="text" placeholder="Логин")
-							div.form-login__man
-								img.form-login__img(src=require("./login.svg"))
-							input.form-login__input(type="password" placeholder="Пароль")
-							div.form-login__pass
-								img.form-login__img(src=require("./password.svg"))
-					div.form-login__row
-						div.form-inputs
-							input.form-inputs__checkbox#check-3(type="checkbox",name="checkbox")
-							label.form-inputs__check(for="check-3") я человек
-					div.form-login__row
-						div.form-radio
-							div.form-radio__title Вы точно не робот?
-							div.form-radio__wrap
-								div.form-radio__circle
-									input.form-radio__check#radio-1(type="radio",name="radio")
-									label.form-radio__radio-name(for="radio-1") Да
-								div.form-radio__circle
-									input.form-radio__check#radio-2(type="radio",name="radio")
-									label.form-radio__radio-name(for="radio-2") Не уверен
-					div.form-login__row
-						div.form-button
-							a(class="button button__login" href="#") На главную
-							a(class="button button__login" href="#") Войти
-		div.author
-			p.author__copyright &copy; Владимир Астахов | создано с любовью в LoftSchool | 2016
+					div.form-login__wrap
+						div.login-center
+							div.form-login
+								h2.block-title.login-center__header авторизуйтесь
+								div.form-login__row
+									div.form-input
+										input.form-login__input(type="text" placeholder="Логин")
+										div.form-login__man
+											img.form-login__img(src=require("../../img/login.svg"))
+										input.form-login__input(type="password" placeholder="Пароль")
+										div.form-login__pass
+											img.form-login__img(src=require("../../img/password.svg"))
+								div.form-login__row
+									div.form-inputs
+										input.form-inputs__checkbox#check-3(type="checkbox",name="checkbox")
+										label.form-inputs__check(for="check-3") Я человек
+								div.form-login__row
+									div.form-radio
+										div.form-radio__title Вы точно не робот?
+										div.form-radio__wrap
+											div.form-radio__circle
+												input.form-radio__check#radio-1(type="radio",name="radio")
+												label.form-radio__radio-name(for="radio-1") Да
+											div.form-radio__circle
+												input.form-radio__check#radio-2(type="radio",name="radio")
+												label.form-radio__radio-name(for="radio-2") Не уверен
+						div.form-login__row
+								ul.btn__list
+									li.btn__item
+										a(class="button button_main" href="#") На главную
+									li.btn__item
+										a(class="button button_inter" href="#") Войти
+			div.author
+				p.author__copyright &copy; Евгений Ларков | создано с любовью в LoftSchool | 2017
 							
 
 

@@ -1,0 +1,14 @@
+//-mixins left navigation footer
+mixin footerNav(className, items)    
+  ul(class=`${className}`)
+    each item in items
+      li(class=`${className}__item`)
+        a(class=`${className}__link` href="#")= item
+
+//-mixins header social
+mixin headSocial(className, items)
+  ul(class=`${className}`)
+    each social in items
+      li(class=`${className}__item`)
+        a(class=`${className}__link` class=`${className}__link_${social}` href="#")
+          img(class=`${className}__icon` src=require(`../../img/${social}.svg`))

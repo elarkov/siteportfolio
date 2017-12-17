@@ -1,0 +1,303 @@
+@import '../../scss/config/mixins.scss';
+@import '../../scss/config/variables.scss';
+
+.section-about {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #efeee9;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #eeebdf;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+.section-triangle {
+  height: 114px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -101px;
+}
+
+.section-triangle__left{
+  fill: #efeee9;
+}
+.section-triangle__right{
+  fill: #eeebdf;
+}
+
+.about {
+  display: flex;
+  padding-top: 45px;
+
+  @include tablets {
+    flex-direction: column;
+  }
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.about-left {
+  width: 50%;
+
+  @include tablets {
+    width: 100%;
+  }
+   @include mobile {
+    width: 100%;
+  }
+}
+
+.about-right {
+  width: 50%;
+  padding-left: 56px;
+
+  @include tablets {
+    width: 100%;
+    padding-left: 0;
+  }
+  @include mobile {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+.about-left__title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.about-me {
+  width: 200px;
+  margin: 0;
+  color: #373e42;
+  font-family: "Bernier";
+  font-size: 63px;
+  font-weight: 400;
+  line-height: 66px;
+  letter-spacing: 1.57px;
+  &:before {
+    top: 29px;
+    left: -30px;
+  }
+  &:after {
+    top: 29px;
+    right: -30px
+  }
+}
+
+.user-desc {
+
+  @include tablets {
+    margin-bottom: 50px;
+  }
+}
+
+.user-desc__img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 37px;
+}
+
+.user-desc__title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.user-desc__subtitle {
+  width: 85px;
+  margin-bottom: 0;
+  &:before {
+    top: 26px;
+    left: 95px;
+  }
+  &:after {
+    top: 26px;
+    right: 95px;
+  }
+}
+
+.user-desc__text {
+  padding: 0 86px;
+  p {
+    margin-bottom: 8px;
+  }
+
+  @include tablets {
+    padding: 0 152px;
+  }
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.text-block {
+  color: #455a64;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24.01px;
+}
+
+.about-left__desc {
+  position: relative;
+}
+
+.about-right__header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.about-title {
+  width: 220px;
+  margin: 0;
+  color: #455a64;
+  font-family: "Bernier";
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 40.92px;
+  &:before {
+    top: 20px;
+    left: -30px;
+  }
+  &:after {
+    top: 20px;
+    right: -30px;
+  }
+
+  @include mobile {
+    font-size: 28px;
+  }
+}
+
+.about-right__desc {
+  position: relative;
+  margin-bottom: 50px;
+
+  @include tablets {
+    padding: 0 152px;
+  }
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.about-right__content {
+  position: relative;
+}
+
+.skill {
+  position: relative;
+  &:after {
+    content: attr(name);
+    color: #00bfa5;
+    font-family: "Roboto";
+    font-size: 13px;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.skills {
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.skills-row {
+
+  @include tablets {
+    text-align: center;
+  }
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.skills-row__header {
+  margin-bottom: 13px;
+  color: #455a64;
+  font-family: "Roboto";
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.skills-row__list {
+  display: flex;
+}
+
+.skills-row__item {
+  margin-right: 35px;
+}
+
+.skills-row__list {
+  margin-bottom: 30px;
+}
+
+
+//map 
+
+.map {
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  @include mobile {
+    align-items: flex-start;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 380px;
+  height: 290px;
+  background: rgba(255,255,255,0.57);
+}
+
+.contacts-header {
+  &:before {
+    left: -30px;
+  }
+  &:after {
+    right: -30px;
+  }
+}
+
+.contacts-row__title {
+  color: #455a64;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contacts-row {
+  display: flex;
+  margin-bottom: 28px;
+}

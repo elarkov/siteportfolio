@@ -1,0 +1,60 @@
+.welcome-content__userpic {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 17px;
+}
+
+.welcome-content__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.welcome-content__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-content__header {
+  margin-bottom: 9px;
+  color: #455a64;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+.weclome-content__text {
+  color: #455a64;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  opacity: 0.8;
+}
+
+.weclome-content__item {
+  margin-right: 30px;
+}
+
+.welcome-content__link {
+  display: block;
+}
+
+.signin {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.button-auth {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 36.12px;
+  padding: 3px 30px;
+  &:hover {
+    border: 1px solid #00a68f;
+  }
+}

@@ -8,47 +8,54 @@
   <link href="./css/common.css" rel="stylesheet"><link href="./css/index.css" rel="stylesheet"></head>
   <body>
     <div class="bg-wrapper">
-      <div class="login-center">
-        <h2 class="header-title login-center__header">авторизуйтесь</h2>
-        <div class="form-login">
-          <form class="form-login__form" action="" method="POST">
-            <div class="form-login__row">
-              <div class="form-input">
-                <input class="form-login__input" type="text" placeholder="Логин">
-                <div class="form-login__man"><img class="form-login__img" src="images/login.svg"></div>
-                <input class="form-login__input" type="password" placeholder="Пароль">
-                <div class="form-login__pass"><img class="form-login__img" src="images/password.svg"></div>
-              </div>
-            </div>
-            <div class="form-login__row">
-              <div class="form-inputs">
-                <input class="form-inputs__checkbox" id="check-3" type="checkbox" name="checkbox">
-                <label class="form-inputs__check" for="check-3">я человек</label>
-              </div>
-            </div>
-            <div class="form-login__row">
-              <div class="form-radio">
-                <div class="form-radio__title">Вы точно не робот?</div>
-                <div class="form-radio__wrap">
-                  <div class="form-radio__circle">
-                    <input class="form-radio__check" id="radio-1" type="radio" name="radio">
-                    <label class="form-radio__radio-name" for="radio-1">Да</label>
+      <div class="form-login">
+        <form class="form-login__form" action="" method="POST">
+          <div class="form-login__wrap">
+            <div class="login-center">
+              <div class="form-login">
+                <h2 class="block-title login-center__header">авторизуйтесь</h2>
+                <div class="form-login__row">
+                  <div class="form-input">
+                    <input class="form-login__input" type="text" placeholder="Логин">
+                    <div class="form-login__man"><img class="form-login__img" src="images/login.svg"></div>
+                    <input class="form-login__input" type="password" placeholder="Пароль">
+                    <div class="form-login__pass"><img class="form-login__img" src="images/password.svg"></div>
                   </div>
-                  <div class="form-radio__circle">
-                    <input class="form-radio__check" id="radio-2" type="radio" name="radio">
-                    <label class="form-radio__radio-name" for="radio-2">Не уверен</label>
+                </div>
+                <div class="form-login__row">
+                  <div class="form-inputs">
+                    <input class="form-inputs__checkbox" id="check-3" type="checkbox" name="checkbox">
+                    <label class="form-inputs__check" for="check-3">Я человек</label>
+                  </div>
+                </div>
+                <div class="form-login__row">
+                  <div class="form-radio">
+                    <div class="form-radio__title">Вы точно не робот?</div>
+                    <div class="form-radio__wrap">
+                      <div class="form-radio__circle">
+                        <input class="form-radio__check" id="radio-1" type="radio" name="radio">
+                        <label class="form-radio__radio-name" for="radio-1">Да</label>
+                      </div>
+                      <div class="form-radio__circle">
+                        <input class="form-radio__check" id="radio-2" type="radio" name="radio">
+                        <label class="form-radio__radio-name" for="radio-2">Не уверен</label>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="form-login__row">
-              <div class="form-button"><a class="button button__login" href="#">На главную</a><a class="button button__login" href="#">Войти</a></div>
+              <ul class="btn__list">
+                <li class="btn__item"><a class="button button_main" href="#">На главную</a></li>
+                <li class="btn__item"><a class="button button_inter" href="#">Войти</a></li>
+              </ul>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
       <div class="author">
-        <p class="author__copyright">&copy; Владимир Астахов | создано с любовью в LoftSchool | 2016</p>
+        <p class="author__copyright">&copy; Евгений Ларков | создано с любовью в LoftSchool | 2017</p>
       </div>
     </div>
   <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/index.js"></script></body>

@@ -1,0 +1,17 @@
+include ./_mixins.pug
+
+header.header
+  div.container
+    div.header__top
+      div.header__social
+        
+        //-mixins header social
+        +headSocial('social', ['vk', 'github', 'in'])
+
+      div.hamburger
+        a(href="").header__menu
+          img.humburger__img(src=require("../../img/hamburger.svg"))
+    include ./userpic.pug
+      
+    
+    

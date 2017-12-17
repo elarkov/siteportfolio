@@ -12,19 +12,27 @@
       <header class="header">
         <div class="container">
           <div class="header__top">
-            <ul class="social">
-              <li class="social__item"><img class="social__icon" src="images/vk.svg"></li>
-              <li class="social__item"><img class="social__icon" src="images/github.svg"></li>
-              <li class="social__item"><img class="social__icon" src="images/in.svg"></li>
-            </ul>
-            <div class="hamburger"><img class="humburger__img" src="images/hamburger.svg"></div>
+            <div class="header__social">
+                    <ul class="social">
+                      <li class="social__item"><a class="social__link social__link_vk" href="#"><img class="social__icon" src="images/vk.svg"></a></li>
+                      <li class="social__item"><a class="social__link social__link_github" href="#"><img class="social__icon" src="images/github.svg"></a></li>
+                      <li class="social__item"><a class="social__link social__link_in" href="#"><img class="social__icon" src="images/in.svg"></a></li>
+                    </ul>
+            </div>
+            <div class="hamburger"><a class="header__menu" href=""><img class="humburger__img" src="images/hamburger.svg"></a></div>
           </div>
-          <div class="userpic"><img class="userpic__img" src="images/userpic.png"></div>
-          <h1 class="header-title">Блог</h1>
-          <div class="header__title">Статьи которые я написал</div>
+<div class="header__user">
+  <div class="userpic"><img class="userpic__img" src="images/userpic.png"></div>
+  <h1 class="header-title">Блог</h1>
+  <div class="header__title">Статьи которые я написал</div>
+</div>
         </div>
       </header>
       <main class="main-content">
+        <svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+          <polygon class="left left_about" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
+          <polygon class="right" points="1000,0 1000,86 500,86 500,75.5"></polygon>
+        </svg>
         <div class="container">
           <div class="blog-content">
             <aside class="sidebar">
@@ -75,25 +83,26 @@
         </div>
       </main>
     </div>
+    <!--footer-->
     <footer class="footer">
       <div class="container">
         <div class="footer-block">
           <div class="footer-block__item">
-            <ul class="bottom-menu">
-              <li class="bottom-menu__item"><a class="bottom-menu__link" href="#">Мои работы</a></li>
-              <li class="bottom-menu__item"><a class="bottom-menu__link" href="#">Обо мне</a></li>
-              <li class="bottom-menu__item"> <a class="bottom-menu__link" href="#">Блог</a></li>
-              <li class="bottom-menu__item"> <a class="bottom-menu__link" href="#">Авторизация</a></li>
+                <ul class="bottom-menu">
+                  <li class="bottom-menu__item"><a class="bottom-menu__link" href="#">Мои работы</a></li>
+                  <li class="bottom-menu__item"><a class="bottom-menu__link" href="#">Обо мне</a></li>
+                  <li class="bottom-menu__item"><a class="bottom-menu__link" href="#">Блог</a></li>
+                  <li class="bottom-menu__item"><a class="bottom-menu__link" href="#">Авторизация</a></li>
+                </ul>
+            <ul class="social_footer">
+              <li class="social__item_footer"><a class="social__link_footer" href="#"><img class="social__icon_footer" src="images/vk_round.svg"></a></li>
+              <li class="social__item_footer"><a class="social__link_footer" href="#"><img class="social__icon_footer" src="images/github_round.svg"></a></li>
+              <li class="social__item_footer"><a class="social__link_footer" href="#"><img class="social__icon_footer" src="images/in_round.svg"></a></li>
             </ul>
-            <div class="bottom-desc">Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.  </div>
           </div>
           <div class="footer-block__item">
-            <ul class="social_footer">
-              <li class="social__item_footer"><img class="social__icon_footer" src="images/vk.svg"></li>
-              <li class="social__item_footer"><img class="social__icon_footer" src="images/github.svg"></li>
-              <li class="social__item_footer"><img class="social__icon_footer" src="images/in.svg"></li>
-            </ul>
-            <div class="copyright">&copy; Владимир Астахов | создано с любовью в LoftSchool | 2016</div>
+            <div class="bottom-desc">Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
+            <div class="copyright">&copy; Евгений Ларков | создано с любовью в LoftSchool | 2017</div>
           </div>
         </div>
       </div>

@@ -1,90 +1,11 @@
-header {
-  position: relative;
-  padding-top: 28px;
-  padding-bottom: 76px;
-  background-image: url(./bg-header.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  &:after {
-    content: "";
-    position: absolute;
-    top: 275px;
-    bottom: 0;
-    background-image: url(./bg-layer.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 168px;
-  }
-}
 
-.header__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 22px;
-}
-
-.social {
-  display: flex;
-  align-items: center;
-}
-
-.social__item {
-  margin-right: 27px;
-}
-
-.hamburger {
-  margin-right: 42px;
-}
-
-.userpic {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 23px;
-}
-
-.header-title {
-  position: relative;
-  color:#ffffff;
-  font-family: "Bernier";
-  font-size: 63px;
-  font-weight: 400;
-  margin: 0 0 4px 0;
-  text-align: center;
-  line-height: 56px;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 26px;
-    left: 496px;
-    width: 22px;
-    height: 5px;
-    background-color: #373e42;
-    opacity: 0.2;
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    top: 26px;
-    right: 491px;
-    width: 22px;
-    height: 5px;
-    background-color: #373e42;
-    opacity: 0.2;
-  }
-}
-
-.header__title {
-  text-align: center;
-  font-family: "Roboto";
-  font-size: 16px;
-  font-weight: 400;
-  color: #ffffff;
-}
-
+@import '../../scss/config/mixins.scss';
+@import '../../scss/config/variables.scss';
 // main-content
+
+.main-content {
+  position: relative;
+}
 
 .blog-content {
   display: flex;
@@ -92,10 +13,19 @@ header {
   p {
     margin-bottom: 10px;
   }
+  @include mobile {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
   width: 300px;
+  @include mobile {
+    display: none;
+  }
+  @include tablets {
+    display: none;
+  }
 }
 
 .menu {
@@ -132,6 +62,13 @@ header {
 .content {
   width: 680px;
   margin-left: 76px;
+  @include mobile {
+    width: 100%;
+    margin-left: 0;
+  }
+  @include tablets {
+    margin-left: 0;
+  }
 }
 
 .blog-list__item {
@@ -169,88 +106,19 @@ header {
   line-height: 26px;
 }
 
-//footer
-
-footer {
-  background-color: rgba(55, 62, 66, 0.85);
+.triangle {
+  height: 114px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -101px;
 }
 
-.footer {
-  position: relative;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 49%;
-    width: 100%;
-    height: 2px;
-    background-color: #ffffff;
-    opacity: 0.1;
-  }
+.left{
+  fill: rgb(255, 255, 255);
 }
-
-.footer-block {
-  display: flex;
-  padding-top: 25px;
-  padding-bottom: 16px;
-  padding-right: 40px;
+.right{
+  fill: rgb(255, 255, 255);
 }
-
-.footer-block__item {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.bottom-menu {
-  display: flex;
-  margin-bottom: 28px;
-}
-
-.bottom-menu__item {
-  margin-right: 40px;
-}
-
-.bottom-menu__link {
-  color: #ffffff;
-  font-family: "Roboto";
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  text-decoration: none;
-}
-
-.bottom-desc {
-  padding-top: 8px;
-  color: #ffffff;
-  font-family: "Roboto";
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 24px;
-  opacity: 0.5;
-}
-
-.social_footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-bottom: 28px;
-}
-
-.social__item_footer {
-  margin-left: 10px;
-}
-
-.copyright {
-  margin-bottom: 10px;
-  color: #ffffff;
-  font-family: "Roboto";
-  font-size: 16px;
-  font-weight: 300;
-  text-align: right;
-  line-height: 24px;
-  opacity: 0.5;
-}
-
 
 

@@ -7,6 +7,135 @@
     <title>Document</title>
   <link href="./css/common.css" rel="stylesheet"><link href="./css/works.css" rel="stylesheet"></head>
   <body>
-    <h1>page works-pug</h1>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__top">
+            <div class="header__social">
+                    <ul class="social">
+                      <li class="social__item"><a class="social__link social__link_vk" href="#"><img class="social__icon" src="images/vk.svg"></a></li>
+                      <li class="social__item"><a class="social__link social__link_github" href="#"><img class="social__icon" src="images/github.svg"></a></li>
+                      <li class="social__item"><a class="social__link social__link_in" href="#"><img class="social__icon" src="images/in.svg"></a></li>
+                    </ul>
+            </div>
+            <div class="hamburger"><a class="header__menu" href=""><img class="humburger__img" src="images/hamburger.svg"></a></div>
+          </div>
+<div class="header__user">
+  <div class="userpic"><img class="userpic__img" src="images/userpic.png"></div>
+  <h1 class="header-title">Блог</h1>
+  <div class="header__title">Статьи которые я написал</div>
+</div>
+        </div>
+      </header>
+      <section class="section section-works">
+        <svg class="works-triangle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+          <polygon class="works-triangle__left" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
+          <polygon class="works-triangle__right" points="1000,0 1000,86 500,86 500,75.5"></polygon>
+        </svg>
+        <div class="works">
+          <h2 class="block-title works-header">Мои работы</h2>
+        </div>
+        <section class="section">
+          <div class="works-content">
+            <div class="works-container">
+              <div class="works__item">
+                <div class="works__left">
+                  <h2 class="block-title works-title">Сайт школы онлайн Образования</h2>
+                  <div class="works__info">html, css, javascript</div><a class="button works-btn" href="#"><img class="works-btn__icon" src="images/link.svg"><span class="works-btn__text">Посмотреть сайт</span></a>
+                </div>
+              </div>
+              <div class="works__item">
+                <div class="works__right">
+                  <div class="works-slider">
+                    <div class="works-slider__main"><img class="works__pic" src="images/portfolio.png"></div>
+                  </div>
+                  <div class="works-bottom">
+                    <div class="works-bottom__down"><img class="works-bottom__img" src="images/one-mockup.png"></div>
+                    <div class="works-bottom__down"><img class="works-bottom__img" src="images/two-mockup.png"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section about-tell">
+          <div class="about-tell__content">
+            <div class="about-tell__header">
+              <h2 class="block-title ask-title">Что обо мне говорят</h2>
+            </div>
+            <div class="about-testimonial">
+              <ul class="about-testimonial__list">
+                <li class="about-testimonial__item">
+                  <div class="about-testimonial__quote"><img class="about-testimonial__icon" src="images/quote.svg"></div>
+                  <div class="about-testimonial__desc">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+                  <div class="about-customer">
+                    <div class="about-customer__icon"><img class="about-customer__user" src="images/customer-one.png">
+                      <div class="about-customer__text"><span class="about-customer__title">Ковальчук Дмитрий</span><span class="about-customer__prof">основатель Loftschool</span></div>
+                    </div>
+                  </div>
+                </li>
+                <li class="about-testimonial__item">
+                  <div class="about-testimonial__quote"><img class="about-testimonial__icon" src="images/quote.svg"></div>
+                  <div class="about-testimonial__desc">Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</div>
+                  <div class="about-customer">
+                    <div class="about-customer__icon"><img class="about-customer__user" src="images/customer-two.png">
+                      <div class="about-customer__text"><span class="about-customer__title">Сабанцев Владимир </span><span class="about-customer__prof">преподаватель</span></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="about-tell__form">
+            <form class="feedback-form" method="POST">
+              <div class="form-wrapper">
+                <div class="form-content">
+                  <div class="form-content__title">
+                    <h2 class="block-title form-title">Связаться со мной</h2>
+                  </div>
+                  <div class="form-content__row">
+                    <input class="form-content__input" type="text" name="name" placeholder="Имя">
+                  </div>
+                  <div class="form-content__row">
+                    <input class="form-content__input" type="text" name="email" placeholder="Email">
+                  </div>
+                  <div class="form-content__row">
+                    <textarea class="form-content__msg" name="message" row="5" placeholder="Ваше сообщение"></textarea>
+                  </div>
+                </div>
+                <div class="form-content__button">
+                  <button class="button button_sent" type="submit">Отправить</button>
+                  <button class="button button_reset" type="reset">Очистить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </section>
+    </div>
+    <!--footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-block">
+          <div class="footer-block__item">
+                <ul class="bottom-menu">
+                  <li class="bottom-menu__item"><a class="bottom-menu__link" href="#">Мои работы</a></li>
+                  <li class="bottom-menu__item"><a class="bottom-menu__link" href="#">Обо мне</a></li>
+                  <li class="bottom-menu__item"><a class="bottom-menu__link" href="#">Блог</a></li>
+                  <li class="bottom-menu__item"><a class="bottom-menu__link" href="#">Авторизация</a></li>
+                </ul>
+            <ul class="social_footer">
+              <li class="social__item_footer"><a class="social__link_footer" href="#"><img class="social__icon_footer" src="images/vk_round.svg"></a></li>
+              <li class="social__item_footer"><a class="social__link_footer" href="#"><img class="social__icon_footer" src="images/github_round.svg"></a></li>
+              <li class="social__item_footer"><a class="social__link_footer" href="#"><img class="social__icon_footer" src="images/in_round.svg"></a></li>
+            </ul>
+          </div>
+          <div class="footer-block__item">
+            <div class="bottom-desc">Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
+            <div class="copyright">&copy; Евгений Ларков | создано с любовью в LoftSchool | 2017</div>
+          </div>
+        </div>
+      </div>
+    </footer>
   <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/works.js"></script></body>
 </html>
