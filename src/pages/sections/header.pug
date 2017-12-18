@@ -7,10 +7,21 @@ header.header
         
         //-mixins header social
         +headSocial('social', ['vk', 'github', 'in'])
-
+      .header-menu
+        nav.navigation
+          ul.navigation__list
+            li.navigation__item
+              a.navigation__link(href="#") Авторизация
+            li.navigation__item
+              a.navigation__link(href="#") Блог
+            li.navigation__item
+              a.navigation__link(href="#") Обо мне
+            li.navigation__item
+              a.navigation__link(href="#") Мои работы
       div.hamburger
-        a(href="").header__menu
-          img.humburger__img(src=require("../../img/hamburger.svg"))
+        .hamburger__top
+        .hamburger__center
+        .hamburger__bottom
     include ./userpic.pug
       
     

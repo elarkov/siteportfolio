@@ -5,3 +5,14 @@ import '../../scss/layout/adjusment.scss';
 import '../../scss/layout/header.scss';
 import '../../scss/layout/footer.scss';
 import './blog.scss';
+
+var hamburger = document.querySelector('.hamburger'),
+    menu = document.querySelector('.header-menu');
+
+function toggleMenu() {
+  hamburger.classList.toggle('open');
+  menu.classList.toggle('header-menu__show');
+  document.body.classList.toggle('scroll');
+}
+hamburger.addEventListener('click', toggleMenu);
+
