@@ -1,11 +1,14 @@
 extends ../base
 
-block head
+//-variables for page about.pug
+block variables
+  -var pageBgHeader= "about_header";
+  -var title= "Обо мне";
+  -var subtitle= "Студент самоучка";
+  
+  -var isPage= true;//-off header and footer
 
-block title
-    title Обо мне
-
-block main
+block content
   section.section.section-about
     svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="section-triangle")
       polygon(class="section-triangle__left" points="0,0 0,86 500.8,86 500.8,75.5")
@@ -14,6 +17,7 @@ block main
       .about
         .about-left
           .about-left__title
+            img.about-left__bgpic(src=require("../../img/about_header.svg"))
             .block-title.about-me Обо мне
 
           .about-left__desc
@@ -41,19 +45,23 @@ block main
           .about-right__content
             ul.skills
               -
-                var titleSkill = ['Frontend', 'Backend', 'Workflow']
+                         
+                var titleSkill = [{name: 'Frontend', value: ['HTML5','CSS3','JavaScript & jQuery']},
+                                  {name: 'Backend', value: ['PHP','mySQL','Node.js & npm', 'Mongo.db']},
+                                  {name: 'Workflow', value: ['Git','Gulp','Webpack']}]
+
               each item in titleSkill
                 li.skills__item
                   .skills-row
-                    .skills-row__header #{item}
+                    .skills-row__header #{item.name}
                     ul.skills-row__list
-                      -
-                        var skillList = ['Html5','Css3','JavaScript & jQuery']
                          
-                      each item in skillList
+                      each i in item.value
                         li.skills-row__item
-                          .skill(name= item)
-                            img.skill__circle(src=require("../../img/ellipse-3.png"))
+                            svg.circles(viewbox="0 0 110 110")
+                              circle(class="circle__first" r="45" cx="50%" cy="50%" fill="none")
+                              circle(class="circle__second circle-50" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+                              span.skills-row__title #{i}
 
   section.section.map
     .google-map
@@ -62,15 +70,7 @@ block main
         .contacts__title
           .block-title.contacts-header Контакты
         ul.contacts__list
-          -
-            var contacts = [
-              ['skype', 'skypekdn'],
-              ['mail', 'elarkov@inbox.ru'],
-              ['phone', '+7 996 381 12 35'],
-              ['locate', 'г.Новосибирск, ул.Есенина, д.9'],
-            ]
-
-          each item in contacts
-            li.contacts__item.contacts-row
-              .contacts-row__icon #{item[0]}
-              .contacts-row__title #{item[1]}
+          +contactItem('skype', 'contact', '#', 'skype')
+          +contactItem('elarkov@inbox.ru', 'contact', 'mailto:elarkov@inbox.ru', 'mail')
+          +contactItem('8800000000', 'contact', 'tel:8800000000', 'phone')
+          +contactItem('г.Новосибирск', 'contact', '', 'map-marker')

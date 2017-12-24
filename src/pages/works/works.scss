@@ -1,5 +1,5 @@
-@import '../../scss/config/mixins.scss';
-@import '../../scss/config/variables.scss';
+@import "../../scss/config/mixins.scss";
+@import "../../scss/config/variables.scss";
 
 .section-works {
   position: relative;
@@ -23,8 +23,15 @@
 .works-triangle__left{
   fill: rgb(255, 255, 255);
 }
+
 .works-triangle__right{
   fill: rgb(255, 255, 255);
+}
+
+.works__picbg {
+  position: absolute;
+  top: 0;
+  opacity: 0.1;
 }
 
 .works-header {
@@ -105,8 +112,16 @@
   align-items: center;
   padding: 0 135px;
 
+  @include tablets {
+    padding: 0;
+    position: absolute;
+    top: 45%;
+  }
+
   @include mobile {
     padding: 0;
+    position: absolute;
+    top: 50%;
   }
 }
 
@@ -164,6 +179,14 @@
   display: flex;
   padding: 113px 0px;
   justify-content: center;
+
+  @include tablets {
+    padding: 90px 0 480px;
+  }
+
+  @include mobile {
+    padding: 90px 0 360px;
+  }
 }
 
 .works-bottom {
@@ -280,11 +303,26 @@
   font-weight: 700;
 }
 
-.about-tell {
+//sections form
+
+/*.about-tell {
   background-image: url("../../img/bg-works.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}*/
+
+.about-tell {
+  position: relative;
+}
+
+.about-tell__bg {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: initial;
+  max-height: initial;
+  position: absolute;
+  z-index: -1;
 }
 
 .about-tell__form {
@@ -308,6 +346,9 @@
 }
 
 .form-content {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
   padding: 36px 26px 26px;
   background: rgba(255,255,255,.5);
 }
@@ -367,5 +408,21 @@
 
 .button_reset {
   border-bottom-left-radius: 0;
+}
+
+//form blur effects
+
+.form-content__blur {
+  width: 100%;
+  height: 100%;
+  background-image: url('../../img/bg-works.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
 }
 

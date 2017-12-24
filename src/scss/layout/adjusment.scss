@@ -75,7 +75,7 @@
       opacity: .22;
     }
   &:active {
-    background-color: lighten(#00bfa5, 10%);
+    background-color: darken(#00bfa5, 10%);
   }
 }
 

@@ -1,11 +1,14 @@
 extends ../base
 
-block head
+//-variables for page blog.pug
+block variables
+  -var pageBgHeader= "blog_header";
+  -var title= "Блог";
+  -var subtitle= "Статьи которые кто-то до меня написал";
+  -var isPage= true;
 
-block title
-    title Блог
 
-block main
+block content
   main.main-content
     svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="triangle")
       polygon(class="left left_about" points="0,0 0,86 500.8,86 500.8,75.5")

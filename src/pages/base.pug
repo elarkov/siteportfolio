@@ -1,20 +1,28 @@
+//-в этом блоке указываем переменные
+//- title, subtitle
+block variables
+
+//-подключаем миксины
+include ./sections/_mixins
+
 doctype html
 html(lang="ru")
-  block head
+
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    block title
-    title Document
+    //- задаем title для страницы через пременную
+    title #{title}
   body
-    .wrapper
-        include ./sections/header
+    - if (isPage) 
+      .wrapper
+          //-header
+          include ./sections/header
+          block content
+          include ./sections/footer
+        
+    - else     
+        block content
+        
 
-        block main
-                
-
-
-
-    //footer
-    include ./sections/footer

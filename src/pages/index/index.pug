@@ -1,20 +1,24 @@
-doctype html
-html(lang="ru")
-	block head
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		meta(http-equiv="X-UA-Compatible", content="ie=edge")
-		block title
-		title Document
-	body
-		div.bg-wrapper
-			div.form-login
-				form.form-login__form(action="",method="POST")
-					div.form-login__wrap
-						div.login-center
-							div.form-login
-								h2.block-title.login-center__header авторизуйтесь
+extends ../base
+
+//-variables for page index.pug
+block variables
+	- var title = "Блог";
+	- var subtitle = "Статьи которые кто-то до меня написал";
+	- var isPage = false;
+
+
+block content
+	div.bg-wrapper
+		div.signin
+			a.button.button-auth(href="#") Авторизоваться
+		div.flip-container
+			div.flipper
+				div.form-login
+					form.form-login__form(action="",method="POST")
+						div.form-login__wrap
+							div.login-center
+								div.login-center__header
+									h2.block-title.login-center__title авторизуйтесь
 								div.form-login__row
 									div.form-input
 										input.form-login__input(type="text" placeholder="Логин")
@@ -37,14 +41,41 @@ html(lang="ru")
 											div.form-radio__circle
 												input.form-radio__check#radio-2(type="radio",name="radio")
 												label.form-radio__radio-name(for="radio-2") Не уверен
+							div.form-login__row
+									ul.btn__list
+										li.btn__item
+											a(class="button button_main" href="#") На главную
+										li.btn__item
+											a(class="button button_inter" href="#") Войти
+
+				div.welcome-inter
+					.welocme-container
+						div.welcome-content
+							.welcome-content__userpic
+								img.welcome-content__pic(src=require("../../img/userpic.png"))
+							.welcome-content__title
+								h2.welcome-content__header Евгений Ларков
+								span.weclome-content__text Личный сайт веб-разработчика
+							.welcome-content__social
+								ul.welcome-content__list
+									li.weclome-content__item
+										a.welcome-content__link(href="#")
+											img.welcome-content__icon(src=require("../../img/vk.svg"))
+									li.weclome-content__item
+										a.welcome-content__link(href="#")
+											img.welcome-content__icon(src=require("../../img/github.svg"))
+									li.weclome-content__item
+										a.welcome-content__link(href="#")
+											img.welcome-content__icon(src=require("../../img/in.svg"))
 						div.form-login__row
 								ul.btn__list
 									li.btn__item
-										a(class="button button_main" href="#") На главную
+										a(class="button button_main" href="works.html") Мои работы
 									li.btn__item
-										a(class="button button_inter" href="#") Войти
-			div.author
-				p.author__copyright &copy; Евгений Ларков | создано с любовью в LoftSchool | 2017
-							
-
-
+										a(class="button button_center" href="about.html") Обо мне
+									li.btn__item
+										a(class="button button_inter" href="blog.html") Блог
+		div.author
+			span.author__copyright &copy; Евгений Ларков 
+			span.author__bootomline | 
+			span.author__copyleft создано с любовью в LoftSchool | 2017
