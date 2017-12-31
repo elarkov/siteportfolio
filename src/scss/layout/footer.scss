@@ -78,6 +78,9 @@ footer {
   @include mobile {
     font-size: 13px;
   }
+  &:hover {
+    color: #00bfa5;
+  }
 }
 
 .bottom-desc {

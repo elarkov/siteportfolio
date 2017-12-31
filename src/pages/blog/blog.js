@@ -1,4 +1,4 @@
-/*===styles===*/
+/*=== styles ===*/
 import 'normalize.css';
 import '../../scss/layout/fonts.scss';
 import '../../scss/layout/base.scss';
@@ -8,13 +8,13 @@ import '../../scss/layout/footer.scss';
 import './blog.scss';
 
 
-var hamburger = document.querySelector('.hamburger'),
-    menu = document.querySelector('.header-menu');
+/*=== scripts modules ===*/
+import initHamburger from '../../js/hamburger';
+import initBlogMenu from '../../js/blogMenu';
 
-function toggleMenu() {
-  hamburger.classList.toggle('open');
-  menu.classList.toggle('header-menu__show');
-  document.body.classList.toggle('scroll');
-}
-hamburger.addEventListener('click', toggleMenu);
+
+
+initHamburger();
+initBlogMenu();
+
 

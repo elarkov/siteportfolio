@@ -17,35 +17,82 @@
   }
 }
 
+
+//sidebar left
 .sidebar {
   width: 300px;
-  @include mobile {
-    display: none;
-  }
+
   @include tablets {
-    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 3px 0 3px rgba(0, 0, 0, 0.2);
+    background-color: #00bfa5;
+    left: -300px;
+    transition: left .3s;
+    height: 100%;
   }
 }
 
+.sidebar__circle {
+  opacity: 0;
+
+  @include tablets {
+    position: absolute;
+    top: 50%;
+    right: -11px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #00bfa5;
+    opacity: 0;
+  }
+}
+
+.sidebar__show {
+  left: 0;
+}
+
 .menu {
+  position: static;
+  width: 300px;
   padding-top: 9px;
   padding-right: 24px;
   text-align: right;
+
+  @include tablets {
+    padding-right: 0;
+  }
 }
 
 .menu__item {
   position: relative;
   margin-bottom: 11px;
   padding-right: 26px;
+  padding-left: 7px;
   padding-top: 7px;
   padding-bottom: 9px;
+
+  @include tablets {
+    padding-left: 26px;
+  }
 }
 
 .menu__item.active {
   border-right: 1px solid #00bfa5;
   border-right-width: 3px;
+
+  @include mobile {
+    border: 0;
+  }
+  
   .menu__link {
     color: #00bfa5;
+
+    @include tablets {
+      color: #ffffff;
+      opacity: 1;
+    }
     }
   }
 
@@ -53,9 +100,14 @@
   color: #455a64;
   font-family: "Roboto";
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 26px;
   text-decoration: none;
+
+  @include tablets {
+    color: #ffffff;
+    opacity: 0.7;
+  }
 }
 
 .content {

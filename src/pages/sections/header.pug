@@ -12,20 +12,28 @@ header.header
         nav.navigation
           ul.navigation__list
             li.navigation__item
+              div.navigation__line
               a.navigation__link(href="#") Авторизация
+              div.navigation__line
             li.navigation__item
+              div.navigation__line
               a.navigation__link(href="#") Блог
+              div.navigation__line
             li.navigation__item
+              div.navigation__line
               a.navigation__link(href="#") Обо мне
+              div.navigation__line
             li.navigation__item
+              div.navigation__line
               a.navigation__link(href="#") Мои работы
+              div.navigation__line
       div.hamburger
         .hamburger__top
         .hamburger__center
         .hamburger__bottom
-    div.header__writebg
-      img.header__picture(src=require(`../../img/${pageBgHeader}.svg`))
     div.header__user
+      div.header__writebg
+        img.header__picture(src=require(`../../img/${pageBgHeader}.svg`))
       div.userpic
         img.userpic__img(src=require("../../img/userpic.png"))
       h1.header-title  #{title}

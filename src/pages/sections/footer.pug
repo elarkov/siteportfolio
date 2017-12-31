@@ -1,5 +1,6 @@
 include ./_mixins.pug
 
+
 footer.footer
   div.container
     div.footer-block
@@ -7,16 +8,17 @@ footer.footer
       
         //-mixins left navigation footer
         +footerNav('bottom-menu', ['Мои работы', 'Обо мне', 'Блог', 'Авторизация'])
+        
         ul.social_footer
           li.social__item_footer
             a.social__link_footer(href="#")
-              img.social__icon_footer(src=require("../../img/vk_round.svg"))
+              include ../../img/vk.svg
           li.social__item_footer
             a.social__link_footer(href="#")
-              img.social__icon_footer(src=require("../../img/github_round.svg"))
+              include ../../img/github.svg
           li.social__item_footer
             a.social__link_footer(href="#")
-              img.social__icon_footer(src=require("../../img/in_round.svg"))
+              include ../../img/in.svg
  
         
       div.footer-block__item

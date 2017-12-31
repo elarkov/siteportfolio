@@ -2,7 +2,6 @@
 @import "../../scss/config/variables.scss";
 
 .bg-wrapper {
-  background-image: url("../../img/bg-login.png");
   background-position: center center;
   background-size: cover;
   height: 100%;
@@ -11,6 +10,42 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  @include laptop {
+    background-image: url("../../img/bg-login.png");
+  }
+}
+
+//parallax styles
+
+#parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  @include laptop {
+    display: none;
+  }
+}
+
+.parallax__layer {
+  height: 136%;
+  width: 120%;
+  position: absolute;
+  top: 0;
+  left: -5%;
+  will-change: transform;
+}
+
+.parallax__img {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  max-height: 3000px;
 }
 
 
@@ -64,17 +99,19 @@
 
 .form-input {
   position: relative;
+  padding-left: 45px;
 }
 
 .form-login__input {
   position: relative;
   display: block;
   width: 100%;
-  padding: 13px 10px 12px 58px;
+  padding: 13px 10px 12px 13px;
   margin-bottom: 20px;
   outline: 0;
   border: 1px solid transparent;
-  border-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
   background: #fff;
 }
 
@@ -84,6 +121,7 @@
   display: flex;
   justify-content: center;
   top: 0;
+  left: 0;
   width: 45px;
   height: 45px;
   background-color: #f0efe9;
@@ -95,13 +133,19 @@
   top: 65px;
 }
 
-.form-login__input:before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 20px;
-  background-color: #f0efe9;
+.form-login__input {
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #f0efe9;
+  }
+  &:focus {
+    border-color: #00bfa5;
+    outline: none;
+  }
 }
 
 .form-inputs {
@@ -368,7 +412,9 @@
   line-height: 36.12px;
   padding: 3px 30px;
   &:hover {
-    border: 1px solid #00a68f;
+    border: 1px solid #fcffff;
+    background-color: #fff;
+    color: #00a68f;
   }
 
   @include mobile {

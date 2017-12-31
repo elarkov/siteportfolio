@@ -393,6 +393,7 @@
 //map 
 
 .map {
+  position: relative;
   background: #ccc;
   display: flex;
   justify-content: center;
@@ -405,6 +406,7 @@
 }
 
 .contacts {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -432,4 +434,12 @@
 .contacts__item {
   display: flex;
   margin-bottom: 28px;
+}
+
+.google-map {
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }

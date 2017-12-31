@@ -2,13 +2,17 @@ extends ../base
 
 //-variables for page index.pug
 block variables
-	- var title = "Блог";
+	- var title = "Евгений Ларков";
 	- var subtitle = "Статьи которые кто-то до меня написал";
 	- var isPage = false;
 
 
 block content
 	div.bg-wrapper
+		div#parallax.parallax
+			- for (var i = 10; i>0; i--)
+				.parallax__layer
+					img.parallax__img(src=require(`../../img/parallax/layer${i}.png`))
 		div.signin
 			a.button.button-auth(href="#") Авторизоваться
 		div.flip-container
@@ -21,6 +25,7 @@ block content
 									h2.block-title.login-center__title авторизуйтесь
 								div.form-login__row
 									div.form-input
+										div.form-login__icon
 										input.form-login__input(type="text" placeholder="Логин")
 										div.form-login__man
 											img.form-login__img(src=require("../../img/login.svg"))

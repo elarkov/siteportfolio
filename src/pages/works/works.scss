@@ -326,7 +326,7 @@
 }
 
 .about-tell__form {
-  padding-bottom: 90px;
+  padding-bottom: 95px;
 }
 
 .feedback-form {
@@ -357,10 +357,14 @@
   width: 100%;
   padding: 13px 10px 12px 8px;
   margin-bottom: 20px;
-  outline: 0;
-  border: 1px solid transparent;
   border-radius: 5px;
   background: #fff;
+  border: 1px solid transparent;
+  transition: 0.1s;
+  &:focus {
+    border: 1px solid #00bfa5;
+    outline: none;
+  }
 }
 
 .form-content__msg {
@@ -372,6 +376,9 @@
   border-radius: 5px;
   background: #fff;
   resize: none;
+  &:focus {
+    border-color: #00bfa5;
+  }
 }
 
 .form-title {
@@ -404,6 +411,7 @@
 
 .button_sent {
   border-bottom-right-radius: 0;
+  border-right: 1px solid rgba(222, 227, 231, 0.8);
 }
 
 .button_reset {

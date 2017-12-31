@@ -8,6 +8,9 @@ block variables
   
   -var isPage= true;//-off header and footer
 
+block scripts
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEF03kFru3aZzFY4zfb6lmeZkAIHMe7kY&callback=initMap", async)
+
 block content
   section.section.section-about
     svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="section-triangle")
@@ -64,7 +67,7 @@ block content
                               span.skills-row__title #{i}
 
   section.section.map
-    .google-map
+    .google-map#map
     .map__data
       .contacts
         .contacts__title
