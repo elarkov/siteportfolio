@@ -9,11 +9,13 @@ import './index.scss';
 /*=== scripts modules ===*/
 import initFliper from '../../js/fliper';
 import initParallax from '../../js/parallax';
+import initPreloader from '../../js/preloader';
 
 
 
 initFliper();
 initParallax();
+initPreloader();
 
 
 

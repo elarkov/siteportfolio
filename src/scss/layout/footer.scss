@@ -120,6 +120,15 @@ footer {
   display: block;
 }
 
+.social-round {
+  fill: #ccc;
+  &:hover {
+    fill: #fff;
+  }
+}
+
+
+
 .copyright {
   width: 50%;
   margin-bottom: 10px;

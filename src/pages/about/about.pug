@@ -12,68 +12,70 @@ block scripts
   script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEF03kFru3aZzFY4zfb6lmeZkAIHMe7kY&callback=initMap", async)
 
 block content
-  section.section.section-about
-    svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="section-triangle")
-      polygon(class="section-triangle__left" points="0,0 0,86 500.8,86 500.8,75.5")
-      polygon(class="section-triangle__right" points="1000,0 1000,86 500,86 500,75.5")
-    .container
-      .about
-        .about-left
-          .about-left__title
-            img.about-left__bgpic(src=require("../../img/about_header.svg"))
-            .block-title.about-me Обо мне
+  main.main-content#arrow-scroll
+    section.section.section-about
+      svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="section-triangle")
+        polygon(class="section-triangle__left" points="0,0 0,86 500.8,86 500.8,75.5")
+        polygon(class="section-triangle__right" points="1000,0 1000,86 500,86 500,75.5")
+      .container
+        .about
+          .about-left
+            .about-left__title
+              .about-left__bgpic
+                include ../../img/about_header.svg
+              .block-title.about-me Обо мне
 
-          .about-left__desc
-            .user-desc
-              .user-desc__img
-                img.user-desc__pic(src=require("../../img/man.png"))
-              .user-desc__title
-                .block-title.user-desc__subtitle Кто я
+            .about-left__desc
+              .user-desc
+                .user-desc__img
+                  img.user-desc__pic(src=require("../../img/man.png"))
+                .user-desc__title
+                  .block-title.user-desc__subtitle Кто я
 
-              .user-desc__text.text-block
-                p Я веб разработчик из Новосибирска. Мне 27 лет.
-                  | Я занимаюсь разработкой современных сайтов
-                  | и приложений. Мне нравится делать интересные
-                  | и современные проекты.
-                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-                  | Чуть позже я освежу в нём свой контент. А пока посмотрите,
-                  | как тут всё классно и красиво!
+                .user-desc__text.text-block
+                  p Я веб разработчик из Новосибирска. Мне 27 лет.
+                    | Я занимаюсь разработкой современных сайтов
+                    | и приложений. Мне нравится делать интересные
+                    | и современные проекты.
+                  p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+                    | Чуть позже я освежу в нём свой контент. А пока посмотрите,
+                    | как тут всё классно и красиво!
 
-        .about-right
-          .about-right__header
-            .block-title.about-title Чем я могу быть вам полезен
-          .about-right__desc.text-block
-            p Больше всего меня привлекет Frontend разработка, но я также знаком
-              | и могу решать не сложные задачи на Backend. Но давайте по порядку.
-          .about-right__content
-            ul.skills
-              -
-                         
-                var titleSkill = [{name: 'Frontend', value: ['HTML5','CSS3','JavaScript & jQuery']},
-                                  {name: 'Backend', value: ['PHP','mySQL','Node.js & npm', 'Mongo.db']},
-                                  {name: 'Workflow', value: ['Git','Gulp','Webpack']}]
+          .about-right
+            .about-right__header
+              .block-title.about-title Чем я могу быть вам полезен
+            .about-right__desc.text-block
+              p Больше всего меня привлекет Frontend разработка, но я также знаком
+                | и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            .about-right__content
+              ul.skills
+                -
+                          
+                  var titleSkill = [{name: 'Frontend', value: ['HTML5','CSS3','JavaScript & jQuery']},
+                                    {name: 'Backend', value: ['PHP','mySQL','Node.js & npm', 'Mongo.db']},
+                                    {name: 'Workflow', value: ['Git','Gulp','Webpack']}]
 
-              each item in titleSkill
-                li.skills__item
-                  .skills-row
-                    .skills-row__header #{item.name}
-                    ul.skills-row__list
-                         
-                      each i in item.value
-                        li.skills-row__item
-                            svg.circles(viewbox="0 0 110 110")
-                              circle(class="circle__first" r="45" cx="50%" cy="50%" fill="none")
-                              circle(class="circle__second circle-50" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
-                              span.skills-row__title #{i}
+                each item in titleSkill
+                  li.skills__item
+                    .skills-row
+                      .skills-row__header #{item.name}
+                      ul.skills-row__list
+                          
+                        each i in item.value
+                          li.skills-row__item
+                              svg.circles(viewbox="0 0 110 110")
+                                circle(class="circle__first" r="45" cx="50%" cy="50%" fill="none")
+                                circle(class="circle__second circle-50" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+                                span.skills-row__title #{i}
 
-  section.section.map
-    .google-map#map
-    .map__data
-      .contacts
-        .contacts__title
-          .block-title.contacts-header Контакты
-        ul.contacts__list
-          +contactItem('skype', 'contact', '#', 'skype')
-          +contactItem('elarkov@inbox.ru', 'contact', 'mailto:elarkov@inbox.ru', 'mail')
-          +contactItem('8800000000', 'contact', 'tel:8800000000', 'phone')
-          +contactItem('г.Новосибирск', 'contact', '', 'map-marker')
+    section.section.map
+      .google-map#map
+      .map__data
+        .contacts
+          .contacts__title
+            .block-title.contacts-header Контакты
+          ul.contacts__list
+            +contactItem('skype', 'contacts', '#', 'skype')
+            +contactItem('elarkov@inbox.ru', 'contacts', 'mailto:elarkov@inbox.ru', 'mail')
+            +contactItem('8800000000', 'contacts', 'tel:8800000000', 'phone')
+            +contactItem('г.Новосибирск, ул. Есенина, д.9', 'contacts', '', 'map-marker')

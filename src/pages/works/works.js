@@ -11,9 +11,15 @@ import './works.scss';
 /*=== scripts modules ===*/
 import initHamburger from '../../js/hamburger';
 import initBlur from '../../js/blur';
+import initArrowScroll from '../../js/arrow-scroll';
+import initParallax from '../../js/parallax';
+import initPreloader from '../../js/preloader';
 
 
 
 initHamburger();
 initBlur();
+initArrowScroll();
+initParallax();
+initPreloader();
 

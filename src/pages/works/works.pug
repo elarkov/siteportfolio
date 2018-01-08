@@ -8,75 +8,79 @@ block variables
   -var isPage= true;
 
 block content
-  section.section.section-works
-    svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="works-triangle")
-      polygon(class="works-triangle__left" points="0,0 0,86 500.8,86 500.8,75.5")
-      polygon(class="works-triangle__right" points="1000,0 1000,86 500,86 500,75.5")
-    div.works
-      img.works__picbg(src=require("../../img/works_header.svg"))
-      h2.block-title.works-header Мои работы
-    section.section
-      .works-content
-        .works-container
-          .works__item
-            .works__left
-              h2.block-title.works-title Сайт школы онлайн Образования
-              .works__info html, css, javascript
-              a.button.works-btn(href="#")
-                img.works-btn__icon(src=require("../../img/link.svg"))
-                span.works-btn__text Посмотреть сайт
-          .works__item
-            .works__right
-              .works-slider
-                .works-slider__main
-                  img.works__pic(src=require("../../img/portfolio.png"))
-              .works-bottom
-                .works-bottom__down
-                  img.works-bottom__img(src=require("../../img/one-mockup.png"))
-                .works-bottom__down
-                  img.works-bottom__img(src=require("../../img/two-mockup.png"))
+  main.main-content#arrow-scroll
+    section.section.section-works
+      svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="works-triangle")
+        polygon(class="works-triangle__left" points="0,0 0,86 500.8,86 500.8,75.5")
+        polygon(class="works-triangle__right" points="1000,0 1000,86 500,86 500,75.5")
+      div.works
+        div.works__picbg
+          include ../../img/works_header.svg
+        h2.block-title.works-header Мои работы
+      section.section
+        .works-content
+          .works-container
+            .works__item
+              .works__left
+                h2.block-title.works-title Сайт школы онлайн Образования
+                .works__info html, css, javascript
+                a.button.works-btn(href="#")
+                  img.works-btn__icon(src=require("../../img/link.svg"))
+                  span.works-btn__text Посмотреть сайт
+            .works__item
+              .works__right
+                .works-slider
+                  .works-slider__main
+                    img.works__pic(src=require("../../img/portfolio.png"))
+                .works-bottom
+                  .works-bottom__down
+                    img.works-bottom__img(src=require("../../img/one-mockup.png"))
+                  .works-bottom__down
+                    img.works-bottom__img(src=require("../../img/two-mockup.png"))
 
 
-    section.section.about-tell
-      img.about-tell__bg(src=require('../../img/works-bg.jpg'))
-      .about-tell__content
-        .about-tell__header
-          h2.block-title.ask-title Что обо мне говорят
-        .about-testimonial
-          ul.about-testimonial__list
-            li.about-testimonial__item
-              .about-testimonial__quote
-                img.about-testimonial__icon(src=require("../../img/quote.svg"))
-              .about-testimonial__desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-              .about-customer
-                .about-customer__icon
-                  img.about-customer__user(src=require("../../img/customer-one.png"))
-                  .about-customer__text
-                    span.about-customer__title Ковальчук Дмитрий
-                    span.about-customer__prof основатель Loftschool
-            li.about-testimonial__item
-              .about-testimonial__quote
-                img.about-testimonial__icon(src=require("../../img/quote.svg"))
-              .about-testimonial__desc Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-              .about-customer
-                .about-customer__icon
-                  img.about-customer__user(src=require("../../img/customer-two.png"))
-                  .about-customer__text
-                    span.about-customer__title Сабанцев Владимир 
-                    span.about-customer__prof преподаватель
-      .about-tell__form
-        form(method="POST").feedback-form
-          .form-wrapper
-            .form-content
-              .form-content__blur
-              .form-content__title
-                h2.block-title.form-title Связаться со мной
-              .form-content__row
-                input.form-content__input(type="text" name="name" placeholder="Имя")
-              .form-content__row
-                input.form-content__input(type="text" name="email" placeholder="Email")
-              .form-content__row
-                textarea.form-content__msg(name="message" row="5" placeholder="Ваше сообщение")
-            .form-content__button
-              button.button.button_sent(type="submit") Отправить
-              button.button.button_reset(type="reset") Очистить
+      section.section.about-tell
+        img.about-tell__bg(src=require('../../img/works-bg.jpg'))
+        .about-tell__content
+          .about-tell__header
+            .works__picbg
+              include ../../img/about_header.svg
+            h2.block-title.ask-title Что обо мне говорят
+          .about-testimonial
+            ul.about-testimonial__list
+              li.about-testimonial__item
+                .about-testimonial__quote
+                  include ../../img/quote.svg
+                .about-testimonial__desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .about-customer
+                  .about-customer__icon
+                    img.about-customer__user(src=require("../../img/customer-one.png"))
+                    .about-customer__text
+                      span.about-customer__title Ковальчук Дмитрий
+                      span.about-customer__prof основатель Loftschool
+              li.about-testimonial__item
+                .about-testimonial__quote
+                  include ../../img/quote.svg
+                .about-testimonial__desc Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .about-customer
+                  .about-customer__icon
+                    img.about-customer__user(src=require("../../img/customer-two.png"))
+                    .about-customer__text
+                      span.about-customer__title Сабанцев Владимир 
+                      span.about-customer__prof преподаватель
+        .about-tell__form
+          form(method="POST").feedback-form
+            .form-wrapper
+              .form-content
+                .form-content__blur
+                .form-content__title
+                  h2.block-title.form-title Связаться со мной
+                .form-content__row
+                  input.form-content__input(type="text" name="name" placeholder="Имя")
+                .form-content__row
+                  input.form-content__input(type="text" name="email" placeholder="Email")
+                .form-content__row
+                  textarea.form-content__msg(name="message" row="5" placeholder="Ваше сообщение")
+              .form-content__button
+                button.button.button_sent(type="submit") Отправить
+                button.button.button_reset(type="reset") Очистить

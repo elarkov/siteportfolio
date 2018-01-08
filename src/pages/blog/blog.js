@@ -11,10 +11,17 @@ import './blog.scss';
 /*=== scripts modules ===*/
 import initHamburger from '../../js/hamburger';
 import initBlogMenu from '../../js/blogMenu';
+import initArrowScroll from '../../js/arrow-scroll';
+import initParallax from '../../js/parallax';
+import initPreloader from '../../js/preloader';
+
 
 
 
 initHamburger();
 initBlogMenu();
+initArrowScroll();
+initParallax();
+initPreloader();
 
 

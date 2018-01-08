@@ -1,9 +1,24 @@
 
 
 header.header
+  div#parallax.parallax
+    - for (var i = 10; i>0; i--)
+      .parallax__layer
+        img.parallax__img(src=require(`../../img/parallax/layer${i}.png`))
   div.container
     div.header__top
       div.header__social
+        ul.social
+          li.social__item
+            a.social__link(href="#")
+              include ../../img/vk.svg
+          li.social__item
+            a.social__link(href="#")
+              include ../../img/github.svg
+          li.social__item
+            a.social__link(href="#")
+              include ../../img/in.svg
+          
         
         //-mixins header social
         +headSocial('social', ['vk', 'github', 'in'])
@@ -13,19 +28,19 @@ header.header
           ul.navigation__list
             li.navigation__item
               div.navigation__line
-              a.navigation__link(href="#") Авторизация
+              a.navigation__link(href="/") Авторизация
               div.navigation__line
             li.navigation__item
               div.navigation__line
-              a.navigation__link(href="#") Блог
+              a.navigation__link(href="blog.html") Блог
               div.navigation__line
             li.navigation__item
               div.navigation__line
-              a.navigation__link(href="#") Обо мне
+              a.navigation__link(href="about.html") Обо мне
               div.navigation__line
             li.navigation__item
               div.navigation__line
-              a.navigation__link(href="#") Мои работы
+              a.navigation__link(href="works.html") Мои работы
               div.navigation__line
       div.hamburger
         .hamburger__top
@@ -38,6 +53,9 @@ header.header
         img.userpic__img(src=require("../../img/userpic.png"))
       h1.header-title  #{title}
       div.header__title #{subtitle}
+    div.header__arrow
+      a.header__arrow_link(href="#arrow-scroll")
+        include ../../img/arrow_down.svg
       
     
     

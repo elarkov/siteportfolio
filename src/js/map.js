@@ -1,10 +1,12 @@
 export default function initMap() {
   
-  var uluru = { lat: -25.363, lng: 131.044 };
+  var novosib = { lat: 55.0415000, lng: 82.9346000 };
   var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: uluru,
-    styles: [
+    zoom: 14,
+    center: novosib,
+    mapTypeControl: false,
+    disableDefaultUI: true,
+    /*styles: [
       {
         featureType: "administrative",
         elementType: "labels.text.fill",
@@ -89,10 +91,11 @@ export default function initMap() {
           }
         ]
       }
-    ]
+    ]*/
   });
-  var marker = new google.maps.Marker({
-    position: uluru,
+  /*var marker = new google.maps.Marker({
+    position: novosib,
     map: map
-  });
+  });*/
+
 }

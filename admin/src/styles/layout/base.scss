@@ -1,0 +1,67 @@
+body,html {
+  height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  position: relative;
+  flex: 1;
+  padding: 30px;
+  background: url('~img/bg-admin.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.button {
+  display: inline-block;
+  min-width: 97px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.42;
+  color: #ffffff;
+  background-color: #00bfa5;
+  padding: 10px 17px;;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  transition: background-color .1s ease;
+  &:focus, &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+  &:hover {
+    background-color: darken(#00bfa5, 5%);
+  }
+    &::after {
+      opacity: .22;
+    }
+  &:active {
+    background-color: darken(#00bfa5, 10%);
+  }
+}
+

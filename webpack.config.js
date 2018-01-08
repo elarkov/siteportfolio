@@ -10,7 +10,6 @@ const extractCSS = require('./webpack/css.extract'); //вызываем моду
 const uglifyJS = require('./webpack/js.uglify'); //вызываем модуль плагина Uglifyjs
 const images = require('./webpack/images'); //вызываем модуль картинок
 const fonts = require('./webpack/fonts'); //вызываем модуль шрифтов
-const svg = require('./webpack/svg');
 
 const PATHS = {
   source: path.join(__dirname, 'src'),
@@ -61,8 +60,7 @@ const common = merge ([
   },
   pug(),
   images(),
-  fonts(),
-  svg()
+  fonts()
 ]);
 
 module.exports = function(env) {

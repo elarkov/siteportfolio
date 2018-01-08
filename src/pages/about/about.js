@@ -9,13 +9,20 @@ import './about.scss';
 
 
 /*=== scripts modules ===*/
+import initPreloader from '../../js/preloader';
 import initHamburger from '../../js/hamburger';
+import initArrowScroll from '../../js/arrow-scroll';
+import initParallax from '../../js/parallax';
 import initMap from '../../js/map';
 
 
 
+initPreloader();
 initHamburger();
+initArrowScroll();
+initParallax();
 initMap();
+
 
 
 
