@@ -20,25 +20,30 @@ block content
       section.section
         .works-content
           .works-container
-            .works__item
-              .works__left
-                h2.block-title.works-title Сайт школы онлайн Образования
-                .works__info html, css, javascript
-                a.button.works-btn(href="#")
-                  img.works-btn__icon(src=require("../../img/link.svg"))
-                  span.works-btn__text Посмотреть сайт
-            .works__item
-              .works__right
-                .works-slider
-                  .works-slider__main
-                    img.works__pic(src=require("../../img/portfolio.png"))
-                .works-bottom
-                  .works-bottom__down
-                    img.works-bottom__img(src=require("../../img/one-mockup.png"))
-                  .works-bottom__down
-                    img.works-bottom__img(src=require("../../img/two-mockup.png"))
-
-
+            .slider-1.slider
+              .slider__main_preview
+                .main-preview__content
+                  .heading__sub_wrap
+                    h2.block-title.heading__sub Cайт школы онлайн-образования
+                  .main-preview__desc html, css, javascript
+                  .main-preview__btn.btn-animate
+                    a.button.button-preview(href="" target="_blank")
+                      img.button-preview__icon(src=require("../../img/link.svg"))
+                      span.button-preview__text Посмотреть сайт
+              .slider__small_preview
+                .slider__image_preview
+              .slider__preview_nav
+                .slider__preview_up
+                  .overlay__preview.overlay__preview_left
+                    a.arrow__link.arrow--up(href="")
+                      img(src=require("../../img/slides/portf-arrow-up.png"))
+                  .slider__image_preview
+                .slider__preview_down
+                  .overlay__preview.overlay__preview_right
+                    a.arrow__link.arrow--down(href="")
+                      img(src=require("../../img/slides/portf-arrow-down.png"))
+                  .slider__image_preview
+                      
       section.section.about-tell
         img.about-tell__bg(src=require('../../img/works-bg.jpg'))
         .about-tell__content

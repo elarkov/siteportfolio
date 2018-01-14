@@ -90,44 +90,25 @@
   }
 }
 
-.works__item {
-  width: 50%;
+//slider style
+
+.slider {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
 
   @include tablets {
-    width: 100%;
-  }
-
-  @include mobile {
-    width: 100%;
+      height: initial;
   }
 }
 
-.works__left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 135px;
-
-  @include tablets {
-    padding: 0;
-    position: absolute;
-    top: 45%;
-  }
-
-  @include mobile {
-    padding: 0;
-    position: absolute;
-    top: 50%;
-  }
-}
-
-.works-title {
+.heading__sub {
+  text-transform: uppercase;
   position: relative;
-  width: 275px;
+  width: 100%;
 
   &:before {
     left: -30px;
@@ -141,10 +122,70 @@
   }
   @include mobile {
     font-size: 26px;
+    margin-bottom: 15px;
   }
 }
 
-.works__info {
+.heading__sub-wrap {
+  
+  @include mobile {
+      padding-top: 0;
+      padding-bottom: 15px;
+  }
+}
+
+.button-preview {
+  display: flex;
+  align-items: center;
+  padding: 5px 18px;
+}
+
+.button-preview__text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 36.14px; 
+}
+
+.button-preview__icon {
+  margin-right: 11px;
+}
+
+.slider__main_preview {
+  height: 100%;
+  width: 50%;
+  background-color: #f2f0e8;
+
+  @include tablets {
+    width: 100%;
+    height: 50vh;
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+  @include mobile {
+    height: 40vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.main-preview__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20%;
+  text-align: center;
+
+  @include tablets {
+      margin: 0;
+  }
+}
+
+.main-preview__desc {
+  margin-bottom: 50px;
+  overflow: hidden;
   color: #20b5a1;
   font-family: "Roboto";
   font-size: 16px;
@@ -155,43 +196,105 @@
   width: 100%;
   text-align: center;
   padding: 20px 0;
-  margin-bottom: 40px;
-}
-
-.works-btn {
-  display: flex;
-  align-items: center;
-  padding: 5px 18px;
-}
-
-.works-btn__text {
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 36.14px;
-}
-
-.works-btn__icon {
-  margin-right: 11px;
-}
-
-.works-slider__main {
-  display: flex;
-  padding: 113px 0px;
-  justify-content: center;
-
-  @include tablets {
-    padding: 90px 0 480px;
-  }
 
   @include mobile {
-    padding: 90px 0 360px;
+      margin-bottom: 15px;
   }
 }
 
-.works-bottom {
+.slider__small_preview {
+  position: relative;
   display: flex;
+  height: 70%;
+  width: 50%;
+  background-color: #e3e2de;
+
+  @include tablets {
+    box-sizing: content-box;
+    height: 100vh;
+    width: 100%;
+    order: -1;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @include mobile {
+    height: 31vh;
+  }
+}
+
+.slider__preview_nav {
+  display: flex;
+  height: 30%;
+  width: 50%;
+
+  @include tablets {
+      height: 30vh;
+      width: 100%;
+  }
+  @include mobile {
+      height: 20vh;
+  }
+}
+
+.slider__preview_down,
+.slider__preview_up {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+}
+
+
+.overlay__preview {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.arrow__link {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay__preview_left {
+  background-color: $slider-arrow_up;
+}
+
+.overlay__preview_right {
+  background-color:$slider-arrow_down;
+}
+
+.slider__number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 80px;
+  color: pink;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.slider__number.number_big {
+  font-size: 200px;
+}
+
+.slider__image_preview {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  right: 15%;
+  bottom: 15%;
+  z-index: 1;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .about-tell__header {

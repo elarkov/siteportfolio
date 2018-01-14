@@ -26,7 +26,7 @@ export default function initPreloader() {
     current += 1;
     $('.preloader__percentage').text(Math.ceil(current * 100 / images.length) + '%');
     if ((Math.ceil(current * 100 / images.length)) >= 100) {
-      $('.preloader').fadeOut(4000);
+      $('.preloader').fadeOut(3000);
     }
   };
 

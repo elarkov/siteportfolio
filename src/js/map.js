@@ -1,36 +1,121 @@
 export default function initMap() {
   
+  window.initMap = function() {
   var novosib = { lat: 55.0415000, lng: 82.9346000 };
-  var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 14,
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 13,
     center: novosib,
     mapTypeControl: false,
     disableDefaultUI: true,
-    /*styles: [
+    styles: [
       {
-        featureType: "administrative",
+        featureType: "all",
+        elementType: "geomerty.fill",
+        stylers: [
+          {
+            color: "#ffffff"
+          }
+        ]
+      },
+      {
+        featureType: "all",
         elementType: "labels.text.fill",
         stylers: [
           {
-            color: "#444444"
+            gamma: 0.01
+          },
+          {
+            lightness: 20
+          }
+        ]
+      },
+      {
+        featureType: "all",
+        elementType: "labels.text.fill",
+        stylers: [
+          {
+            saturation: -31
+          },
+          {
+            lightness: -33
+          },
+          {
+            weight: 2
+          },
+          {
+            gamma: 0.8
+          }
+        ]
+      },
+      {
+        featureType: "all",
+        elementType: "labels.icon",
+        stylers: [
+          {
+            saturation: -100
+          },
+          {
+            visibility: "off"
           }
         ]
       },
       {
         featureType: "landscape",
-        elementType: "all",
+        elementType: "geometry",
         stylers: [
           {
-            color: "#f2f2f2"
+            lightness: 30
+          },
+          {
+            saturation: 30
+          }
+        ]
+      },
+      {
+        featureType: "landscape",
+        elementType: "geometry.fill",
+        stylers: [
+          {
+            color: "#ffffff"
+          }
+        ]
+      },
+      {
+        featureType: "landscape",
+        elementType: "geometry.sroke",
+        stylers: [
+          {
+            hue: "#ff0000"
+          }
+        ]
+      },
+      {
+        featureType: "landscape.natural.terrain",
+        elementType: "geometry",
+        stylers: [
+          {
+            color: "#61dac9"
           }
         ]
       },
       {
         featureType: "poi",
-        elementType: "all",
+        elementType: "geometry",
         stylers: [
           {
-            visibility: "off"
+            saturation: 20
+          }
+        ]
+      },
+      {
+        featureType: "poi.park",
+        elementType: "geometry",
+        stylers: [
+          {
+            lightness: 20
+          },
+          {
+            saturation: -20
           }
         ]
       },
@@ -39,34 +124,31 @@ export default function initMap() {
         elementType: "all",
         stylers: [
           {
-            saturation: "-100"
-          },
-          {
-            lightness: "1"
-          },
-          {
-            gamma: "1.44"
-          },
-          {
-            weight: "2.70"
+            color: "#f1f1f1"
           }
         ]
       },
       {
-        featureType: "road.highway",
-        elementType: "all",
+        featureType: "road",
+        elementType: "geometry",
         stylers: [
           {
-            visibility: "simplified"
+            lightness: 10
+          },
+          {
+            saturation: -30
           }
         ]
       },
       {
-        featureType: "road.arterial",
-        elementType: "labels.icon",
+        featureType: "road",
+        elementType: "geometry.stroke",
         stylers: [
           {
-            visibility: "off"
+            saturation: 25
+          },
+          {
+            lightness: 25
           }
         ]
       },
@@ -75,7 +157,16 @@ export default function initMap() {
         elementType: "all",
         stylers: [
           {
-            visibility: "off"
+            color: "#f1f1f1"
+          }
+        ]
+      },
+      {
+        featureType: "transit.line",
+        elementType: "all",
+        stylers: [
+          {
+            color: "#f1f1f1"
           }
         ]
       },
@@ -84,18 +175,14 @@ export default function initMap() {
         elementType: "all",
         stylers: [
           {
-            color: "#86a77a"
+            lightness: -20
           },
           {
-            visibility: "on"
+            color: "#61dac9"
           }
         ]
       }
-    ]*/
+    ]
   });
-  /*var marker = new google.maps.Marker({
-    position: novosib,
-    map: map
-  });*/
-
+};
 }
